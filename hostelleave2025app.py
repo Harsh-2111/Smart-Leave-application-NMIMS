@@ -7,7 +7,17 @@ from io import BytesIO
 from PIL import Image
 import os
 import datetime
-
+hide_streamlit_style="""
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+[data-testid="stToolbar"]{
+    visibility: hidden;
+    display: none;
+}
+</style>
+"""
 USERS = {
     "student": {"id": "student123", "password": "pass123"},
     "teacher_dileep": {"id": "dileep123", "password": "pass456", "name": "Dileep Kumar"},
